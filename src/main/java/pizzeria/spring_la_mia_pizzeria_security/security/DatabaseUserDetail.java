@@ -20,7 +20,7 @@ public class DatabaseUserDetail implements UserDetails{
     private Set<GrantedAuthority> authorities;
 
     public DatabaseUserDetail(User user){
-        this.username = user.getName();
+        this.username = user.getUsername();
         this.password = user.getPassword();
         this.authorities = new HashSet<>();
         for(Role role : user.getRoles()){
